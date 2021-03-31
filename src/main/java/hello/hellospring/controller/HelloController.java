@@ -14,7 +14,7 @@ public class HelloController {
         model.addAttribute("data", "Jaeseo에 접속하신 : 재서 님!");
         return "Jaeseo";
     }
-
+    // Controller는 우선적으로 viewResolver를 탐색하여 template에 model을 적용한 페이지를 리턴해준다.
     @GetMapping("hello-mvc")
     public String helloMvc(@RequestParam("name") String name, Model model){
         model.addAttribute("name", name);
@@ -27,6 +27,7 @@ public class HelloController {
         return "hello " + name;
     }
 
+    // Spring에서 API를 얻는다 -> ResponseBody를 선언하고 객체를 리턴하면 자동으로 httpMessageConverter가 JSON으로 변환해준다
     @GetMapping("hello-api")
     @ResponseBody
     public Hello helloApi(@RequestParam("name") String name, @RequestParam("number") int number){
