@@ -10,12 +10,12 @@ import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+//@Service  // spring boot 실행시 자동으로 Component scan
 public class MemberService {
 
     private final MemberRepository memberRepository;
 
-    @Autowired
+    //@Autowired  // 하위에 필요한 클래스들을 autowired 한다 basically single tone
     public MemberService(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
     }
