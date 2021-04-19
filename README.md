@@ -1,4 +1,5 @@
-# hello-spring
+# Hello Spring!! 
+
 Spring 의 대략적인 개요를 경험하기 위한 프로젝트입니다.
 
 1. Spring Boot를 이용한 프로젝트 생성
